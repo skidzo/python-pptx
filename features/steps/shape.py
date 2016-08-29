@@ -308,9 +308,9 @@ def then_connector_is_a_Connector_object(context):
     assert type(context.connector).__name__ == 'Connector'
 
 
-@then('connector.begin_x is 1')
-def then_connector_begin_x_is_1(context):
-    assert context.connector.begin_x == 1
+@then('connector.begin_x == {value}')
+def then_connector_begin_x_equals_value(context, value):
+    assert context.connector.begin_x == int(value)
 
 
 @then('connector.begin_x is an Emu object with value {x}')
@@ -320,9 +320,9 @@ def then_connector_begin_x_is_an_Emu_object_with_value_x(context, x):
     assert begin_x == int(x)
 
 
-@then('connector.begin_y is 2')
-def then_connector_begin_y_is_2(context):
-    assert context.connector.begin_y == 2
+@then('connector.begin_y == {value}')
+def then_connector_begin_y_equals_value(context, value):
+    assert context.connector.begin_y == int(value)
 
 
 @then('connector.begin_y is an Emu object with value {y}')
@@ -332,9 +332,9 @@ def then_connector_begin_y_is_an_Emu_object_with_value_y(context, y):
     assert begin_y == int(y)
 
 
-@then('connector.end_x is 3')
-def then_connector_end_x_is_3(context):
-    assert context.connector.end_x == 3
+@then('connector.end_x == {value}')
+def then_connector_end_x_equals_value(context, value):
+    assert context.connector.end_x == int(value)
 
 
 @then('connector.end_x is an Emu object with value {x}')
@@ -344,9 +344,9 @@ def then_connector_end_x_is_an_Emu_object_with_value_x(context, x):
     assert end_x == int(x)
 
 
-@then('connector.end_y is 4')
-def then_connector_end_y_is_4(context):
-    assert context.connector.end_y == 4
+@then('connector.end_y == {value}')
+def then_connector_end_y_equals_value(context, value):
+    assert context.connector.end_y == int(value)
 
 
 @then('connector.end_y is an Emu object with value {y}')

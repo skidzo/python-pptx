@@ -8,7 +8,7 @@ Feature: Shape collection methods
     Given a SlideShapes object
      When I call shapes.add_connector(MSO_CONNECTOR.STRAIGHT, 1, 2, 3, 4)
      Then connector is a Connector object
-      And connector.begin_x is 1
-      And connector.begin_y is 2
-      And connector.end_x is 3
-      And connector.end_y is 4
+      And connector.begin_x == 1
+      And connector.begin_y == 2
+      And connector.end_x == 3
+      And connector.end_y == 4
