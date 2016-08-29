@@ -4,7 +4,7 @@ Feature: Shape collection methods
   I need a set of methods on Shapes objects
 
 
-  Scenario: Connector.add_connector()
+  Scenario: SlideShapes.add_connector()
     Given a SlideShapes object
      When I call shapes.add_connector(MSO_CONNECTOR.STRAIGHT, 1, 2, 3, 4)
      Then connector is a Connector object
