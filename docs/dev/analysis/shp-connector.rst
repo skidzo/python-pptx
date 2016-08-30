@@ -36,16 +36,16 @@ Design Issues
   even matter once the line is drawn?
 
   Definitely requires a test where end_x is less that begin_x and end_y is
-  less that begin_y.
+  less that begin_y.::
 
-  def end_points(connector):
-      x, y, cx, cy = (
-          connector.left, connector.top, connector.width, connector.height
-      )
-      begin_x = (x+cx) if flipH else x
-      begin_y = (y+cy) if flipV else y
-      end_x = x if flipH else (x+cx)
-      end_y = y if flipV else (y+cy)
+      def end_points(connector):
+          x, y, cx, cy = (
+              connector.left, connector.top, connector.width, connector.height
+          )
+          begin_x = (x+cx) if flipH else x
+          begin_y = (y+cy) if flipV else y
+          end_x = x if flipH else (x+cx)
+          end_y = y if flipV else (y+cy)
 
 * See how PowerPoint interprets the remaining connector types like
   bentConnector2
