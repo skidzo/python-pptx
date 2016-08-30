@@ -578,6 +578,20 @@ Related Schema Definitions
     </xsd:sequence>
   </xsd:complexType>
 
+  <xsd:complexType name="CT_Connection">
+    <xsd:attribute name="id"  type="ST_DrawingElementId" use="required"/>
+    <xsd:attribute name="idx" type="xsd:unsignedInt"     use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="CT_NonVisualConnectorProperties">
+    <xsd:sequence>
+      <xsd:element name="cxnSpLocks" type="CT_ConnectorLocking"       minOccurs="0"/>
+      <xsd:element name="stCxn"      type="CT_Connection"             minOccurs="0"/>
+      <xsd:element name="endCxn"     type="CT_Connection"             minOccurs="0"/>
+      <xsd:element name="extLst"     type="CT_OfficeArtExtensionList" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
   <xsd:complexType name="CT_ShapeProperties">
     <xsd:sequence>
       <xsd:element name="xfrm"                type="CT_Transform2D"            minOccurs="0"/>
